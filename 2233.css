@@ -1,0 +1,36 @@
+  #animation22{
+    width:220px;
+    height:250px;
+    //background-color:red;
+  	background-image:url(http://a3.qpic.cn/psb?/V12a4ruU1PsdU2/Fxvvu8vqMY0k0XTtE.58vRgwuHxJGMAe423tgdOXrNk!/b/dFgBAAAAAAAA&bo=5gD6AAAAAAADBz4!&rf=viewer_4);
+  	background-size: 220px 250px;
+	background-repeat: no-repeat;
+    z-index:9999;
+    position:fixed;
+    margin:435px 0;
+  transition:1s;
+    }
+  #animation22:hover{
+  	width:330px;
+  	height: 375px;
+	background-size: 330px 375px;
+	margin:310px 0;
+}
+  #animation33{
+    width:220px;
+    height:250px;
+    //background-color:red;
+  	background-image:url(http://a3.qpic.cn/psb?/V12a4ruU1PsdU2/uvucaC3xFu5iJh0lrLUWAMegmQvWZFaREyDJu79P4HE!/b/dFgBAAAAAAAA&bo=3AD6AAAAAAADBwQ!&rf=viewer_4);
+  	background-size: 220px 250px;
+	background-repeat: no-repeat;
+    z-index:9998;
+    position:fixed;
+    margin:435px 1265px;
+  transition:1s;
+    }
+  #animation33:hover{
+  	width:330px;
+  	height: 375px;
+	background-size: 330px 375px;
+	margin:310px 1155px;
+}
