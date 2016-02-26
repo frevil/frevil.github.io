@@ -1,7 +1,7 @@
 function init_content_wrap(){
 	content_wrap_width=document.getElementById("nav_left_wraper").offsetWidth;
 	document.getElementsByClassName("content_wrap")[0].style.marginLeft=(content_wrap_width+60)+"px";
-	document.getElementById("footer").style.marginLeft=(content_wrap_width+40)+"px";
+	document.getElementById("footer").style.marginLeft=(content_wrap_width+60)+"px";
 	preventScroll("nav_left");
 }
 function preventScroll(id){  
