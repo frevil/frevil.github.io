@@ -1,11 +1,9 @@
 function init_content_wrap(){
-	content_wrap_width=document.getElementById("nav_left_wraper").offsetWidth;
-	document.getElementsByClassName("content_wrap")[0].style.marginLeft=(content_wrap_width+60)+"px";
-	document.getElementById("footer").style.marginLeft=(content_wrap_width+60)+"px";
 	preventScroll("nav_left");
+	preventScroll("content_wrap");
 }
 function preventScroll(id){  
-    var _this = document.getElementById(id);  
+    var _this = document.getElementById(id)||document.getElementsByClassName(id)[0];  
     if(navigator.userAgent.indexOf("Firefox")>0){  
         _this.addEventListener('DOMMouseScroll',function(e){  
             _this.scrollTop += e.detail > 0 ? 60 : -60;     
@@ -19,4 +17,4 @@ function preventScroll(id){
         };  
     }  
     return this;  
-}  
+} 
