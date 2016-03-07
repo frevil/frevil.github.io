@@ -8,11 +8,22 @@
 </head>
 <body onload="init_content_wrap()">
 <div id="header">
-  <div id="container"></div>
+  <div class="head_container">
+    <div class="head_logo">
+      <div class="head_image"></div>
+      <div class="head_name">547</div>
+    </div>
+    <div class="head_nav">
+    </div>
+    <!-- <button onclick="create()">提 交</button>
+    list_1:<input id="ord_class1" type="label">
+    B_tittle:<input id="tittle_b" type="label">
+    S_tittle:<input id="tittle_s" type="label"> -->
+  </div>
 </div>
-<div id="wraper" style="width: 100%; height: 500px;">
+<div id="wraper">
   <div id="nav_left_wraper">
-    <div id="nav_left" mousewhell=>nav_left
+    <div id="nav_left" mousewhell="">nav_left
       <ul id="list" style="margin-right:10px">
         [ul表头]
         <li class="list_out">Start!
@@ -20,15 +31,21 @@
             <li class="list_1_in">
               <a href="#content_1_1">主页第一步</a>
             </li>
-          </ul>
+          <li class="list_1_in"><a href="#content_1_2">然后呢。。</a></li></ul>
         </li>
       </ul>
     </div>      
   </div>
-  <div class="content_wrap">content
-    <div class="content" id="content_1_1"><p>&nbsp;&nbsp;&nbsp;&nbsp;今天终于把主页大致框架弄好了，，不过由于没有经验，所以看上去不太好；考虑到主页更新的问题，自己用js写了个简单的生成代码，以后网页更新会简单一点。</p></div>
+  <div class="content_wrap_outside">
+    <div class="content_wrap">content
+      <div class="content" id="content_1_1"><p>今天终于把主页大致框架弄好了，，不过由于没有经验，所以看上去不太好；考虑到主页更新的问题，自己用js写了个简单的生成代码，以后网页更新会简单一点。(2016.2.29)</p></div>
+      <div class="content" id="content_1_2"><p>然后就不知道写什么了。。(2016.3.5)</p></div>
+    </div>
   </div>
 </div>
 <div id="footer"></div>
+
+
 </body>
 </html>
+
