@@ -32,7 +32,7 @@ body{
 	box-shadow: 0 0 22px #1f1f1f;	
 }
 .head_image:hover{
-	background-image: url(dog222.jpg);
+	background-image: url(images/dog222.jpg);
 	background-size: 97% 122%;
 	background-position: 2px 50%;
 }
