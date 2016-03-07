@@ -1,21 +1,65 @@
 body{
 	margin: 0;
+	min-width: 1250px;
+	background-repeat: no-repeat; 
+	background-size: 1340px 120%;
+	background-position: 0 -40px;
+	background-image: url(../images/95.jpg); 
 }
 #header{
-	height: 30px;
-	background-size: 100% 100%;
-	background-color: #999;
-	/*background-image: url(../../%E5%9B%BE%E7%89%87/b9473ea7d933c89515265e6bd31373f08202002e.jpg);*/
+	height: 120px;
+	background-size: 100% 140%;
+	/*background-color: #999;*/
+}
+.head_container{
+	height: 100%;
+	/*background-color: #999;*/
+}
+.head_logo{
+	width: 80px;
+	height: 100px;
+	position: relative;
+	left: 2%;
+	top: 10%;
+}
+.head_image{
+	width: 100%;
+	height: 80%;
+	border-radius: 50%;
+	background-image: url(file:///E:/html/images/111.jpg);
+	background-size: 100% 130%;
+	background-position: 0 50%;
+	box-shadow: 0 0 22px #1f1f1f;	
+}
+.head_image:hover{
+	background-image: url(file:///E:/html/images/222.jpg);
+	background-size: 97% 122%;
+	background-position: 2px 50%;
+}
+.head_name{
+	width: 100%;
+	height: 20%;
+	text-align: center;
+}
+.head_nav{
+	display: inline-table;
+}
+#wraper{
+
+	height: 480px; 
+	width: 100%;"
 }
 #nav_left_wraper{
-	border: 1px solid #666; 
+	/*border: 1px solid #666; */
 	margin: 2%; 
 	position: relative; 
-	height: 480px; 
+	height: 400px; 
 	width: auto; 
 	text-align: left;
-	position: fixed;
+	position: relative;
+	float: left;
 	overflow: hidden;
+	box-shadow: 0 0 22px #1f1f1f;
 }
 #nav_left{
 	/*border: 1px solid #666; 
@@ -34,22 +78,36 @@ body{
 	left: -10px;
 	list-style: decimal;
 }
-.content{
-	margin:10px;
-	padding: 10px;
-	border: 1px solid #666;
-	height: 150px;
-	background-color: #999;
-	text-align: left;
-}
-.content_wrap{
-	border: 1px solid #666;
+.content_wrap_outside{
+	/*border: 1px solid #666;*/
 	margin-bottom: 2%; 
 	margin-right: 0px; 
 	margin-top: 2%; 
+	position: relative;
 	float: left; 
-	width: 60%;
+	width: 79%;
+	min-width: 1000px;
+	height: 400px;
+	overflow: hidden;
+	box-shadow: 0 0 22px #1f1f1f;
 }
+.content_wrap{
+	position: relative;
+	width: 102%;
+	height: 100%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+.content{
+	margin:20px;
+	padding: 10px;
+	border: 1px solid #666;
+	/*height: 150px;*/
+	text-align: left;
+}
+/*.content p{
+	opacity: 1;
+}*/
 /*.aside_right{
 	width: auto; 
 	border: 1px solid #666; 
@@ -60,8 +118,11 @@ body{
 }*/
 #footer{
 	clear: left; 
-	background-color: #CC0; 
-	width: 60%; 
-	height: 80px;
+	/*background-color: #CC0; */
+	width: 100%; 
+	height: 60px;
 	margin: 0 auto;
+}
+.date{
+	margin-left: 80%;
 }
