@@ -1,1 +1,1 @@
-#img_resours if my blog
+#img_resours of my blog
