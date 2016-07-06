@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>4-1-6</title>
+	<script type="text/javascript" src="easeljs-0.8.2.min.js"></script>
+</head>
+<body>
+	<div class="welcome">
+		<div class="logo_416_container">
+			<div class="logo_416">
+				<div class="wrapper_416">
+					<span>4</span><span>1</span><span>6</span>
+				</div>
+				<div class="words">个人主页</div>
+			</div>
+		</div>
+		<div class="light_container">
+			<div class="light"></div>
+		</div>
+		<div class="string">
+			<div class="line"></div>
+			<div class="spot">
+				<div class="spot_inside"></div>
+				<div class="ring_inside"></div>
+			</div>
+		</div>
+		<div class="canvas">
+			<canvas    id="canvas"></canvas>
+		</div>
+	</div>
+	<div class="side">
+		<div class="discuss    linkable_tag"    href="/discuss/"></div>
+		<div class="another    linkable_tag"></div>
+	</div>
+	<div class="toggle">
+		<div class="header"></div>
+		<div class="main_wrapper">
+			<div class="main">
+				<div class="persons_wrapper">
+					<div class="person_item  linkable_tag"    href="/wsq/">吴思奇</div>
+					<div class="person_item  linkable_tag"    href="/szh/">石钊衡</div>
+					<div class="person_item  linkable_tag"    href="/lfj/">练方杰</div>
+					<div class="person_item  linkable_tag"    href="/wrg/">王睿刚</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="ball_nav_wrapper">
+				<div class="ball center"></div>
+				<div class="ball around ball1"></div>
+				<div class="ball around ball2"></div>
+				<div class="ball around ball3"></div>
+				<div class="ball around ball4"></div>
+				<div class="ball around ball5"></div>
+				<div class="ball around ball6"></div>
+			</div>
+		</div>
+		<div id="root"></div>
+	</div>
+	<script type="text/javascript" >
+		var welcome_ = document.getElementsByClassName('welcome');
+		var canvas = document.getElementById('canvas');
+		var stage = new createjs.Stage('canvas');
+		canvas.width = window.screen.availWidth;
+		canvas.height = window.screen.availHeight;
+
+		window.onload = function () {
+			var data = {
+				images:["../static/js/star.png"],
+				frames:{width:238,height:238,regX:119,regY:119}
+			}
+			star = 
+			spritesheet = new createjs.SpriteSheet(data);
+			sprite = new createjs.Sprite(spritesheet);
+			add_stars();
+			createjs.Ticker.setFPS(25);
+			createjs.Ticker.addEventListener("tick",tick);
+		}
+
+		function tick(e) {
+			var num = stage.getNumChildren();
+			for (var i = 0; i < num; i++) {
+				var s = stage.getChildAt(i);
+				s.x += s.v_lr;
+				s.a_lr = s.x<s.x0?s.a0_lr:-s.a0_lr;
+				s.v_lr += s.a_lr;
+				s.y -=s.y>0?s.v_up:-canvas.height;
+				s.scaleX = s.scaleY = s.size/2;
+
+			} 
+			stage.update(e);
+		}
+
+		function add_stars(e) {
+			for (var i = 50; i >= 0; i--) {
+				var s = sprite.clone();
+				s.x = s.x0 = Math.floor(Math.random()*canvas.width);
+				s.y = s.y0 = Math.floor(Math.random()*canvas.height);
+				s.v_lr = (Math.random()-0.5)*4;
+				s.a_lr = s.a0_lr = Math.random()*0.1;
+				s.size = Math.random()+0.2;
+				s.v_up = Math.random()*0.7+0.5;
+				s.alpha = Math.random()*0.8+0.2;
+				stage.addChild(s);
+			}
+		}
+	</script>
+	
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
